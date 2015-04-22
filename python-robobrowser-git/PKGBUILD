@@ -2,4 +2,27 @@
 
 pkgname=python-robobrowser
 _gitname=robobrowser
-pkgver
+pkgver=0.5.2.f842291
+pkgrel=1
+pkgdesc="Pythonic library for browsing the web without a standalone webbrowser"
+arch=('any')
+url="https://github.com/jmcarp/${_gitname}"
+license=('MIT')
+depends=('pytho'n
+         'python-requests'
+         'python-beautifulsoup4'
+         'python-pip'
+         'python-werkzeug')
+makedepends=('git'
+             'python-setuptools')
+conflicts=('python-robobrowser')
+provides('python-robobrowser')
+source=("git+${url}.git")
+md5sums=('SKIP')
+
+pkgver() {
+  cd "$_gitname"
+  git describe --long | sed -r 's/^v//;s/[^-]*-g)/r\1;s/-/./g
+}
+
+# vim:set ts=2 sw=2 et:

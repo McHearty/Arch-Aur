@@ -6,7 +6,7 @@ pkgver=0.3.4.28f471c
 pkgrel=1
 pkgdesc="Mopidy extension for playing music from Google Play Music"
 arch=('any')
-url="https://github.com/hechtus/$(_gitname)"
+url="https://github.com/hechtus/${_gitname}"
 license=('APACHE')
 depends=('mopidy>=0.16'
          'python2-gmusicapi'
@@ -14,7 +14,7 @@ depends=('mopidy>=0.16'
 makedepends=('git')
 conflicts=('mopidy-gmusic')
 provides=("$_gitname")
-source=('git+$(url).git')
+source=("git+${url}.git")
 md5sums=('SKIP')
 
 pkgver() {
