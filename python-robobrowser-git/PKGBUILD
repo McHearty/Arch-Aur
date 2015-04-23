@@ -24,5 +24,7 @@ pkgver() {
   cd "$_gitname"
   git describe --long | sed -r 's/^v//;s/[^-]*-g)/r\1;s/-/./g
 }
+build () {
+  cd 
 
 # vim:set ts=2 sw=2 et:
